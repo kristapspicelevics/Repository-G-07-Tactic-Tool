@@ -10,8 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TacticTool">
         <activity
-            android:name=".ProfileActivity"
-            android:exported="true" />
+
+            android:name=".ViewTacticActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditTacticActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreateTacticActivity"
+            android:exported="false" />
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
