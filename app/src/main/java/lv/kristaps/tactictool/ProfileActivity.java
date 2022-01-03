@@ -7,13 +7,16 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class ProfileActivity extends AppCompatActivity {
+
+    Button btnSelectImage = findViewById(R.id.btnPicture);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_profile);
     }
 
     @Override
@@ -34,12 +37,11 @@ public class MainActivity extends AppCompatActivity {
             case R.id.view:
                 return true;
             case R.id.profile:
-                intent = new Intent(MainActivity.this, ProfileActivity.class);
+                intent = new Intent(ProfileActivity.this, ProfileActivity.class);
                 startActivity(intent);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
-
 }
