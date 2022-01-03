@@ -43,10 +43,10 @@ public class MainActivity extends AppCompatActivity {
                 finish();
                 return true;
             case R.id.profile:
-
+                intent = new Intent(MainActivity.this, ProfileActivity.class);
+                startActivity(intent);
                 return true;
             case R.id.logout:
-
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
