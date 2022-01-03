@@ -3,11 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+
+        <entry key="..\:/Users/Ainars/AndroidStudioProjects/Repository-G-07-Tactic-Tool/app/src/main/res/layout/activity_profile.xml" value="0.36666666666666664" />
+
         <entry key="..\:/Users/aleks/AndroidStudioProjects/Repository-G-07-Tactic-Tool/app/src/main/res/layout/activity_create_tactic.xml" value="0.2957427536231884" />
         <entry key="..\:/Users/aleks/AndroidStudioProjects/Repository-G-07-Tactic-Tool/app/src/main/res/layout/activity_edit_tactic.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/aleks/AndroidStudioProjects/Repository-G-07-Tactic-Tool/app/src/main/res/layout/activity_main.xml" value="0.2957427536231884" />
         <entry key="..\:/Users/aleks/AndroidStudioProjects/Repository-G-07-Tactic-Tool/app/src/main/res/layout/activity_view_tactic.xml" value="0.35260416666666666" />
         <entry key="..\:/Users/aleks/AndroidStudioProjects/Repository-G-07-Tactic-Tool/app/src/main/res/menu/main_menu.xml" value="0.36666666666666664" />
+
       </map>
     </option>
   </component>
