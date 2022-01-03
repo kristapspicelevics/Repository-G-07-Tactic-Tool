@@ -1,24 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item
-        android:id="@+id/create"
-        android:icon="@drawable/ic_baseline_add_a_photo_24"
-        android:title="Create tactic"
-        app:showAsAction="ifRoom" />
+
+    <item android:id="@+id/create"
+        android:title="Create tactic" />
     <item
         android:id="@+id/edit"
-        android:icon="@drawable/ic_baseline_edit_24"
-        android:title="Edit tactic"
-        app:showAsAction="ifRoom" />
+        android:title="Edit tactic" />
     <item
         android:id="@+id/view"
-        android:icon="@drawable/ic_baseline_pageview_24"
-        android:title="View tactic"
-        app:showAsAction="ifRoom" />
+        android:title="View tactic" />
     <item
         android:id="@+id/profile"
         android:icon="@drawable/ic_baseline_person_24"
         android:title="Profile"
         app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/ic_baseline_exit_to_app_24"
+        android:title="Logout"
+        app:showAsAction="ifRoom" />
+
 </menu>
+
+
