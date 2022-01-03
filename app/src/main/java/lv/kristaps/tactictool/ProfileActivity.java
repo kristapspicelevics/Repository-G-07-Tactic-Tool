@@ -11,7 +11,7 @@ import android.widget.Button;
 
 public class ProfileActivity extends AppCompatActivity {
 
-    Button btnSelectImage = findViewById(R.id.btnPicture);
+    //Button btnSelectImage = findViewById(R.id.btnPicture);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
