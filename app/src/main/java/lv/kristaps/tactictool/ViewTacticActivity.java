@@ -40,7 +40,9 @@ public class ViewTacticActivity extends AppCompatActivity {
                 finish();
                 return true;
             case R.id.profile:
-
+                intent = new Intent(ViewTacticActivity.this, ProfileActivity.class);
+                startActivity(intent);
+                finish();
                 return true;
             case R.id.logout:
 

@@ -21,9 +21,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:ems="10"
-        android:text="Tactic name:"
+        android:text="Choose tactic:"
         android:textColor="@color/black"
-        android:textSize="36sp" />
+        android:textSize="30sp" />
 
     <!--
     <TextView
@@ -54,7 +54,9 @@
         android:id="@+id/spinner"
         android:layout_width="match_parent"
         android:layout_height="51dp"
-        android:layout_marginTop="30dp" />
+        android:layout_marginTop="30dp"
+      />
+
 
     <ImageView
 
