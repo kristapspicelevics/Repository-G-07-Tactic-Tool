@@ -122,7 +122,9 @@ public class EditTacticActivity extends AppCompatActivity {
                 finish();
                 return true;
             case R.id.profile:
-
+                intent = new Intent(EditTacticActivity.this, ProfileActivity.class);
+                startActivity(intent);
+                finish();
                 return true;
             case R.id.logout:
 
