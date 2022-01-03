@@ -58,7 +58,7 @@ public class RegisterActivity extends AppCompatActivity {
                                 DocumentReference documentReference = database.collection("Users").document(userID);
                                 Map<String,Object> user = new HashMap<>();
                                 user.put("name",name);
-                                user.put("pass",pass);
+                                user.put("email",email);
                                 documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override
                                     public void onSuccess(Void aVoid) {
