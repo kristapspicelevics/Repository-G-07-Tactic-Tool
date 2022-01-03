@@ -16,22 +16,37 @@
             android:text="@string/hello_blank_fragment" />
             -->
     <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Choose tactic:"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/teal_200"/>
+
+    <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:text="Edit tactic name"
         android:textColor="@color/black"
-        android:textSize="36sp" />
+        android:textSize="30sp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/TextTacticName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="8dp"
         android:autofillHints="Input tactic name"
-        android:ems="10"
         android:hint="Te būs taktikas nosaukums"
         android:inputType="textPersonName"
         android:selectAllOnFocus="false"
@@ -59,7 +74,7 @@
 
     <Button
 
-        android:id="@+id/takeImage"
+        android:id="@+id/saveTactic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"

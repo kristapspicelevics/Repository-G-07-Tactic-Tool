@@ -26,7 +26,7 @@
         android:textSize="36sp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/TextTacticName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -58,7 +58,7 @@
 
     <Button
 
-        android:id="@+id/takeImage"
+        android:id="@+id/saveTactic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"

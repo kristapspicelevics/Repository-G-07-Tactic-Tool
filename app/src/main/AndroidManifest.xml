@@ -13,6 +13,7 @@
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
         <activity
+
             android:name=".ViewTacticActivity"
             android:exported="false" />
         <activity
@@ -21,6 +22,10 @@
         <activity
             android:name=".CreateTacticActivity"
             android:exported="false" />
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="true" />
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
