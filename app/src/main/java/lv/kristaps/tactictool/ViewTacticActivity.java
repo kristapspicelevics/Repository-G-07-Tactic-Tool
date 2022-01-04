@@ -11,6 +11,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -35,6 +37,7 @@ public class ViewTacticActivity extends AppCompatActivity {
 
     TextView tacticName;
     String imageName;
+    Button takeMeToCreate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +45,17 @@ public class ViewTacticActivity extends AppCompatActivity {
         setContentView(R.layout.activity_view_tactic);
 
         tacticName = findViewById(R.id.NameOfTactic);
+        takeMeToCreate = findViewById((R.id.takeMeToCreate));
 
+        takeMeToCreate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent;
+                intent = new Intent(ViewTacticActivity.this, CreateTacticActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         //bildes datu ņemšana no database
         FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
