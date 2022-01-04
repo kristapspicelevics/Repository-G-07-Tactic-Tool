@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:autofillHints="Input tactic name"
-        android:hint="Te būs taktikas nosaukums"
+        android:text=""
         android:inputType="textPersonName"
         android:selectAllOnFocus="false"
         android:singleLine="false"

@@ -78,15 +78,11 @@ public class CreateTacticActivity extends AppCompatActivity {
                     showToast(name);
                     uploadImage();
                 }
-
             }
-
-
         });
-
     }
-    private void uploadImage() {
 
+    private void uploadImage() {
 
         ProgressDialog diaglog = new ProgressDialog(this);
         diaglog.setMessage("Uploading...");
@@ -100,6 +96,7 @@ public class CreateTacticActivity extends AppCompatActivity {
             FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
             FirebaseFirestore database= FirebaseFirestore.getInstance();
             userId=firebaseAuth.getCurrentUser().getUid();
+
             String fileName=random;
             name= TextTacticName.getText().toString();
 
