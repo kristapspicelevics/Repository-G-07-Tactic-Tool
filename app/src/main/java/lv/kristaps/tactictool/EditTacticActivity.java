@@ -15,6 +15,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 
 public class EditTacticActivity extends AppCompatActivity {
 
@@ -127,7 +129,10 @@ public class EditTacticActivity extends AppCompatActivity {
                 finish();
                 return true;
             case R.id.logout:
-
+                FirebaseAuth.getInstance().signOut();
+                intent = new Intent(EditTacticActivity.this, LoginActivity.class);
+                startActivity(intent);
+                finish();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

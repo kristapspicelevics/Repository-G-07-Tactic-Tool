@@ -32,7 +32,7 @@
         android:layout_marginTop="40dp"
         android:autofillHints="Input tactic name"
         android:ems="10"
-        android:hint="TEST"
+        android:hint="Zona 2-3 (example)"
         android:inputType="textPersonName"
         android:selectAllOnFocus="false"
         android:singleLine="false"

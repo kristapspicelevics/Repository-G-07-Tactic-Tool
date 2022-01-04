@@ -47,13 +47,6 @@ public class CreateTacticActivity extends AppCompatActivity {
     Button saveTacticButton;
 
     Uri imageUri;
-
-    //private ImageView IVPreviewImage;
-    //public Uri imageUri;
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,35 +64,9 @@ public class CreateTacticActivity extends AppCompatActivity {
             }
         });
 
-
-
-
-               /* BSelectImage.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        imageChooser();
-                        //setContentView(R.layout.activity_main);
-
-                    }
-                });*/
-
         TextTacticName = (EditText) findViewById(R.id.TextTacticName);
 
         saveTacticButton = (Button) findViewById(R.id.saveTactic);
-        /*saveTacticButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {// checko vai ir nosaukums ievadits
-                name= TextTacticName.getText().toString();
-                //name=IVPreviewImage.getTag().toString();
-                if (TextUtils.isEmpty(TextTacticName.getText().toString())){
-                    showToast(notName);
-                }else{
-                    showToast(name);
-                }
-
-            }
-        });*/
-
 
         saveTacticButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -129,9 +96,6 @@ public class CreateTacticActivity extends AppCompatActivity {
             String random= (UUID.randomUUID().toString());
 
             StorageReference reference = storage.getReference().child(random);
-
-            //reference.get
-            //StorageReference test = storage.getReference().child(TextTacticName.toString());
 
             FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
             FirebaseFirestore database= FirebaseFirestore.getInstance();
@@ -165,7 +129,6 @@ public class CreateTacticActivity extends AppCompatActivity {
                 }
             });
         }
-
     }
 
     ActivityResultLauncher<String> mGetContent = registerForActivityResult(new ActivityResultContracts.GetContent(),
@@ -180,51 +143,9 @@ public class CreateTacticActivity extends AppCompatActivity {
                 }
             });
 
-
-   /* private void choosePicture() {
-        Intent intent = new Intent();
-        intent.setType("image/*");
-        intent.setAction(Intent.ACTION_GET_CONTENT);
-        startActivityForResult(intent, 1);
-    }*/
-
-
-
     private  void showToast(String text){
         Toast.makeText(CreateTacticActivity.this, text, Toast.LENGTH_SHORT).show();
     }
-   /* void imageChooser() {
-
-        // create an instance of the
-        // intent of the type image
-        Intent i = new Intent();
-        i.setType("image/*");
-        i.setAction(Intent.ACTION_GET_CONTENT);
-
-        // pass the constant to compare it
-        // with the returned requestCode
-        startActivityForResult(Intent.createChooser(i, "Select Picture"), SELECT_PICTURE);
-    }*/
-
-    // this function is triggered when user
-    // selects the image from the imageChooser
-    /*public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if (resultCode == RESULT_OK) {
-
-            // compare the resultCode with the
-            // SELECT_PICTURE constant
-            if (requestCode == SELECT_PICTURE) {
-                // Get the url of the image from data
-                Uri selectedImageUri = data.getData();
-                if (null != selectedImageUri) {
-                    // update the preview image in the layout
-                    IVPreviewImage.setImageURI(selectedImageUri);
-                }
-            }
-        }
-    }*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -256,7 +177,10 @@ public class CreateTacticActivity extends AppCompatActivity {
                 finish();
                 return true;
             case R.id.logout:
-
+                FirebaseAuth.getInstance().signOut();
+                intent = new Intent(CreateTacticActivity.this, LoginActivity.class);
+                startActivity(intent);
+                finish();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

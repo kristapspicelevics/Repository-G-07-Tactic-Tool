@@ -44,6 +44,7 @@ public class ViewTacticActivity extends AppCompatActivity {
         tacticName = findViewById(R.id.NameOfTactic);
 
 
+        //bildes datu ņemšana no database
         FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
         FirebaseFirestore database= FirebaseFirestore.getInstance();
         String userId=firebaseAuth.getCurrentUser().getUid();
@@ -56,6 +57,7 @@ public class ViewTacticActivity extends AppCompatActivity {
                 imageName = tacticName.getText().toString();
                 tacticName.setText("Name: " +value.getString("TacticName"));
 
+                //sākas bildes ņemšana no storage
                 mStorageReference = FirebaseStorage.getInstance().getReference().child(imageName);
 
                 try {
@@ -112,6 +114,9 @@ public class ViewTacticActivity extends AppCompatActivity {
                 return true;
             case R.id.logout:
                 FirebaseAuth.getInstance().signOut();
+                intent = new Intent(ViewTacticActivity.this, LoginActivity.class);
+                startActivity(intent);
+                finish();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
