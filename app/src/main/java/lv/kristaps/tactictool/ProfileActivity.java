@@ -8,15 +8,25 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class ProfileActivity extends AppCompatActivity {
 
     //Button btnSelectImage = findViewById(R.id.btnPicture);//ja neizkomentē šito, tad neiet
 
+    TextView userName;
+    EditText email;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
+        userName = findViewById(R.id.userName);
+        email = findViewById(R.id.txtEmail);
+        userName.setText("First Name: " + "Zis iz da mai neim");
+        email.setText("Zis vī hav from DB");
     }
 
     @Override
